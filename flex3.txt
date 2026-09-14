@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="Author" content="Pushkar" />
+<title>Grid Layout</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:black;
+    color:white;
+    font-family:Arial, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+main{
+    width:850px;
+    border:2px solid white;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:70px 220px 70px;
+}
+
+header,
+nav,
+footer{
+    border:1px solid white;
+    padding:10px;
+}
+
+.content{
+    grid-column:1/3;
+    border:1px solid white;
+    position:relative;
+}
+
+.leftbox,
+.rightbox{
+    width:150px;
+    height:80px;
+
+    background:deepskyblue;
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    font-weight:bold;
+    font-size:14px;
+
+    position:absolute;
+}
+
+.leftbox{
+    top:15px;
+    left:15px;
+}
+
+.rightbox{
+    bottom:15px;
+    right:15px;
+}
+
+</style>
+</head>
+
+<body>
+<main>
+
+    <header>Logo</header>
+
+    <nav>Links</nav>
+
+    <section class="content">
+
+        <section class="leftbox">
+            Left Top<br>Corner Box
+        </section>
+
+        <section class="rightbox">
+            Right Bottom<br>Corner Box
+        </section>
+
+    </section>
+
+    <footer>Footer1</footer>
+    <footer>Footer2</footer>
+
+</main>
+
+</body>
+</html>

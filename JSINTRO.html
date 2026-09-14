@@ -1,0 +1,58 @@
+<!DOCTYPE html> <!-- responsive --> 
+<html lang='en'> 
+<head> 
+<title>Page Title</title> 
+<meta charset='utf-8'> 
+<meta name='viewport' content='width=device-width, initial-scale=1'> 
+<link rel='stylesheet' href='main.css'> 
+<script>
+    alert("CHECK CHEK");
+</script>
+<style> 
+*{ 
+margin: 0; 
+padding: 0; 
+box-sizing: border-box; 
+font-size: 1.2rem; 
+color: white; 
+} 
+body{ 
+min-height: 100dvh; 
+display: flex;
+flex-direction: column;
+} 
+section {
+display: flex; 
+flex: 1;
+}
+@media (max-width: 768px) {
+section {
+flex-direction: column;
+}
+aside, main, article {
+width: 100% !important;
+height: auto !important;
+}
+}
+</style> 
+</head> 
+<body> 
+<header style=" padding: 10px; min-height: 10vh; background-color: dodgerblue; display: flex; align-items: center; " > 
+<nav>Navigation Links</nav> 
+</header> 
+<section> 
+<aside style=" padding: 10px; width: 20%; background-color: indigo; " > 
+Sidebar 
+</aside> 
+<main style="padding: 10px; width: 65%; background-color: teal;"> 
+Main 
+</main> 
+<article style=" padding: 10px; width: 15%; background-color: indigo; "> 
+Article 
+</article> 
+</section> 
+<footer style="padding: 10px; min-height: 10vh; background-color: dodgerblue;"> 
+footer 
+</footer> 
+</body> 
+</html>

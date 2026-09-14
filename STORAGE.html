@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Student List</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <h2>Student Names</h2>
+    <ul id="studentList"></ul> 
+
+    <script>
+        const students = 
+        [
+            { id: 1, 
+            name: "raj", 
+            course: "JAVASCRIPT", 
+            marks: 80 
+            },
+            { id: 2, 
+            name: "raja", 
+            course: "JAVASCRIPT", 
+            marks: 92 
+            },
+            { id: 3, 
+            name: "rajan", 
+            course: "JAVASCRIPT", 
+            marks: 73 
+            } 
+        ];
+
+        localStorage.setItem("students", JSON.stringify(students));
+        
+        const data = localStorage.getItem("students"); 
+        const studentData = JSON.parse(data); 
+        
+        const studentList = document.getElementById("studentList"); 
+
+        studentData.forEach((student) => {
+            const li = document.createElement("li"); 
+            li.textContent = student.name; 
+            studentList.append(li); 
+        });
+    </script>
+</body>
+</html>

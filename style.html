@@ -1,0 +1,53 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        .darktheme {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <button id="btn1">Theme1</button>
+    </header>
+    <section class="card">Once upon a time </section>
+    <script>
+        const btn1 = document.querySelector("#btn1");
+        // btn1.addEventListener("click", cbf);
+        // function cbf() { //callback func(cbf)
+        //     document.body.classList.toggle("darktheme");
+        //     if (btn1.textContent == "Theme1") {
+        //         btn1.textContent = "Theme2";
+        //     }
+        //     else {
+        //         btn1.textContent = "Theme1";
+        //     }
+        // }
+        btn1.addEventListener("click", 
+        function() {
+        document.body.classList.toggle("darktheme");
+        
+        if (btn1.textContent === "Theme1") {
+            btn1.textContent = "Theme2";
+        } else {
+            btn1.textContent = "Theme1";
+        }
+        }
+        )
+            // btn1.addEventListener("click", () => {
+            //     document.body.classList.toggle("darktheme");
+            //     const isDark = document.body.classList.contains("darktheme");
+            //     btn1.textContent = isDark ? "Theme2" : "Theme1";
+            // })
+    </script>
+</body>
+
+</html>

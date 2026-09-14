@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    min-height: 100vh;
+    background: rgb(26, 112, 187);
+    color: rgb(10, 98, 180);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clock{
+    width: 25rem;
+    height: 10rem;
+    background: #314158;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow:  0px 5px 5px hsla(0,0%,0%,0.2);
+
+}

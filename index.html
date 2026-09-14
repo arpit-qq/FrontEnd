@@ -1,0 +1,67 @@
+<!--Write a html program using javascript. 
+Print all elements of an array. 
+Find sum of all the elements. 
+Count even and odd numbers. 
+Reverse array without using reverse function. 
+Find average in array.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Operations</title>
+</head>
+<body>
+
+<h2>Array Operations using JavaScript</h2>
+<p id="output"></p>
+
+<script>
+    // Define array
+    let arr = [10, 15, 20, 25, 30];
+
+    let output = "";
+
+    // Print all elements
+    output += "<b>Array Elements:</b> ";
+    for (let i = 0; i < arr.length; i++) {
+        output += arr[i] + " ";
+    }
+
+    // Find sum
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    output += "<br><b>Sum:</b> " + sum;
+
+    // Count even and odd numbers
+    let even = 0, odd = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0)
+            even++;
+        else
+            odd++;
+    }
+    output += "<br><b>Even Count:</b> " + even;
+    output += "<br><b>Odd Count:</b> " + odd;
+
+    // Reverse array without using reverse()
+    let reversed = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+        reversed.push(arr[i]);
+    }
+    output += "<br><b>Reversed Array:</b> " + reversed.join(" ");
+
+    // Find average
+    let avg = sum / arr.length;
+    output += "<br><b>Average:</b> " + avg;
+
+    // Display output
+    document.getElementById("output").innerHTML = output;
+</script>
+
+</body>
+</html>
+
+
+

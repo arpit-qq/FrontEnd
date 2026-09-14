@@ -1,0 +1,97 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="Author" content="Maulik" />
+<title>Grid Layout</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:black;
+    color:white;
+    font-family:Arial, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+main{
+    width:900px;
+    border:2px solid white;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:70px 220px 70px;
+}
+
+header,
+nav,
+section,
+footer{
+    border:1px solid white;
+    padding:10px;
+}
+
+section{
+    display:flex;
+    align-items:center;
+}
+
+.left{
+    justify-content:flex-end;
+    padding-right:15px;
+}
+
+.right{
+    justify-content:flex-start;
+    padding-left:15px;
+}
+
+article{
+    width:120px;
+    height:90px;
+    background:royalblue;
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<main>
+
+    <header>Logo</header>
+
+    <nav>Links</nav>
+
+    <section class="left">
+        <article>
+            Small<br>Square Box
+        </article>
+    </section>
+
+    <section class="right">
+        <article>
+            Small<br>Square Box
+        </article>
+    </section>
+
+    <footer>Footer1</footer>
+    <footer>Footer2</footer>
+
+</main>
+</body>
+</html>
